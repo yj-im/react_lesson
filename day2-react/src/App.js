@@ -1,6 +1,8 @@
 import './App.css'
 import Calculate from './component/Calculate'
+import CalculateV2 from './component/CalculateV2'
 import InputState from './component/InputState'
+import PageMove from './component/PageMove'
 import Say from './component/Say'
 
 function App(){
@@ -14,7 +16,9 @@ function App(){
             <hr/>
             <Calculate/>
             <hr/>
-            <spreadop/>
+            <CalculateV2/>
+            <hr/>
+            <PageMove last={8}/>
         </div>
 
     )

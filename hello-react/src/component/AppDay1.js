@@ -6,7 +6,7 @@ import MyComponentProps2 from './component/MyComponentProps2';
 import LogicalTest from './component/LogicalTest';
 
 // 첫날 수업 App.js (백업용)
-function App() {
+function AppDay1() {
   return (
     <div className="App">
       <MyComponent/>

@@ -10,7 +10,7 @@ function InputState() {
     const [nickname,setNickname] = useState('')
 
     // 상태 변수 username 또는 nickname 값이 변경되면 리렌더링.콘솔 출력
-    console.log('리렌더링',username, nickname)
+    console.log('RE-렌더링',username, nickname)
 
     // OK 버튼 이벤트
     const handleOk = ()=>{
