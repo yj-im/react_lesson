@@ -9,9 +9,9 @@ function CalculateV2() {
   const [result, setResult] = useState(0)
   
   // 상태 변수 username 또는 nickname 값이 변경되면 리렌더링.콘솔 출력
-  console.log('리렌더링',first, second)
+  console.log('Calculate V2 리렌더링',first, second)
 
-  // OK 버튼 이벤트
+  // 계산 버튼 4개 이벤트
   const handleCalculate = (e) => {
       const sel = e.target.innerHTML
       setOp(sel)
@@ -39,7 +39,7 @@ function CalculateV2() {
 
   return (
     <div>
-          <h3>input 에 state 변수 활용</h3>
+          <h3>input 에 state 변수 활용-v2</h3>
           <p>input value 에 상태변수를 적용하면 onChange 이벤트 꼭 필요합니다.</p>
           <hr/>
           <input type='text'
