@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import TodoTemplate from './component/TodoTemplate';
 import TodoInsert from './component/TodoInsert';
 import TodoList from './component/TodoList';
+import TodoListItem from './component/TodoListItem';
 
 
 
@@ -59,22 +60,32 @@ function App() {
         setTodos(todos.concat(todo))
         // todos.concat(todo) 는 새로운 배열을 리턴. state변화. 재렌더링
     }
+    const onTest =(id)=>{
+        window.alert(id+':todo app 입니다')
+    }
     return (
         <>
         <button onClick={()=>handleInsert('테스트할일')}>할일 추가</button>
         <button onClick={()=>handleRemove(1)}>할일 삭제 id=2번</button>
         <button onClick={()=>handleChecked(2)}>할일 체크 변경 id=2</button>
-        <div>
-            <TodoTemplate>
-                    <TodoInsert onInsert={handleInsert}/>
-                    <TodoList todos={todos} onRemove={handleRemove} onChecked={handleChecked}/>
-                    {/* 프로퍼티이름={변수명} */}
-             </TodoTemplate>
-            <hr/>
-            
+        
+        {/* todos.map()을 실행하는 컴포넌트. todos 없으면 오류 */}
+        {/* <TodoList/> */}
+       <TodoList todos={[]}/>
+       <TodoList todos={[
+        {
+            id:1,
+            checked:true
+        },
+        {id:2,
+            checked:false
+
+        }
+       ]} onTest={onTest}/>
+  
           
             
-        </div>
+        
         </>
     );
 }
